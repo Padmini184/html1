@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "dark",
+	title:{
+		text: "Line Chart"
+	},
+ 	axisX:{
+  	title : "Overs"
+ 	},
+ 	axisY:{
+  	title : "Runs"
+ 	},
+
+	data: [{        
+		type: "line",  
+		labels:["5", "10","15"],     
+		dataPoints: [
+			{ x:5, y: 40 },
+			{ x:10, y: 75},
+			{ x:15, y: 140}
+	
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+<style>
+h1 {
+  	font-size: 30px;
+	font-family: Arial;
+	color:DodgerBlue;
+
+}
+h3{
+	font-size:25px;
+	color:Tomato;
+}
+</style>
+</head>
+<body>
+<center>
+<h1>BOARD OF CONTROL FOR CRICKET IN INDIA</h1>
+<h3>Indian Team for T20 cricket match</h3>
+<table BORDER="1">
+<tr>
+<th>OVER</th>
+<th>RUNS</th>
+</tr>
+<tr>
+<td>5</td>
+<td>40</td>
+</tr>
+<tr>
+<td>10</td>
+<td>75</td>
+</tr>
+<tr>
+<td>15</td>
+<td>140</td>
+</tr>
+</table>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
