@@ -1,0 +1,90 @@
+<html>
+<head>
+<style>
+* {
+    margin: 0; padding: 0;
+}
+html, body, #container {
+    height: 100%;
+}
+header {
+    height: 50px;
+    background: gray;
+}
+main {
+    height: 100%;
+    background: green;
+}
+.half:first-child {
+    background: #f1f1f1;
+    height:20%;
+}
+.half:last-child {
+    background: powderblue;
+    height:80%;
+}
+video.vide{
+width:70%;
+height:70%;
+}
+button{
+border-radius: 12px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+button.btn1{
+background-color: #4CAF50;
+}
+button.btn2{
+background-color:blue;
+}
+h1{
+font-family:fantasy;
+font-style:italic;
+font-size:40px;
+color:red;
+}
+h4{
+font-family:cursive;
+font-style:italic;
+font-size:20px;
+color:blue;
+}
+</style>
+</head>
+<body>
+<div id="container">
+    <main>
+        <section class="half">
+	<center>
+	<h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsWIOHSnwEYsFBcIrQpsgPuaLtRMGwxapiIYxmi_EaAwrGcITwcQ" height="100px" width="150px">AWESOME ONLINE VIDEOS</h1>
+	</center>
+	</section>
+        <section class="half">
+	<center>
+	<h4>Video of the week is HERE!!!</h4>
+	<video id="vid" class="vide">
+	<source src="video.mp4" type="video/mp4">
+	</video><br><br>
+	<button type="button" class="btn1" onclick="play()">PLAY</button>
+	<button type="button" class="btn2" onclick="pause()">PAUSE</button>
+	<script>
+		var x=document.getElementById("vid");
+		function play(){
+		x.play();
+		}
+		function pause(){
+		x.pause();
+		}
+
+</script>
+	</center>
+	</section>
+    </main>
+</div>
